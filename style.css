@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --border-color: rgb(145, 195, 220);
+    --cv-margin: 10px;
+    box-sizing: border-box;
+  }
+  .cv {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 2fr;
+  }
+  
+  input:required:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+  input:required:valid {
+    border-color: rgb(78, 50, 241);
+  }
+  
+  button:hover {
+    color: blue;
+    transition: 0.2s;
+  }
+  button {
+    border-radius: 6px;
+    /*display: block;*/
+  
+    width: 166px;
+    height: 25px;
+    margin: 5px;
+  
+    cursor: pointer;
+  }
+  html {
+    background-color: var(--border-color);
+  }
+  
+  .cv-enterDiv {
+    display: grid;
+    grid-template-rows: 80px 100px 100px;
+  }
+  .cv-registrationFormDiv {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+  
+  fieldset {
+    border: none;
+    margin: 5px;
+  }
+  .cv-registrationFormDiv-buttonSubmit,
+  .cv-enterDiv-ButtonResetSubmit {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  H1,
+  H2,
+  fieldset
+  /*.cv-registrationFormDiv-buttonSubmit*/
+  /*.cv-enterDiv-ButtonResetSubmit */ {
+    display: grid;
+    justify-content: center;
+  }
+  h1,
+  h2 {
+    font-family: "Raleway", sans-serif;
+    font-family: "Shantell Sans", cursive;
+  }
+  label {
+    display: grid;
+    justify-content: center;
+  }
+  @media only screen and (min-width: 540px) {
+    .cv {
+      padding: 10px;
+    }
+    input,
+    button {
+      width: 250px;
+      height: 23px;
+      font-size: 15px;
+    }
+    label {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+    h2 {
+      font-size: 27px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cv {
+      padding: 10px;
+      grid-template-rows: 100vh;
+    }
+    .cv-enterDiv {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    .cv-registrationFormDiv {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+    input,
+    button {
+      width: 350px;
+      height: 30px;
+      font-size: 25px;
+    }
+    label {
+      font-size: 25px;
+    }
+    h1 {
+      font-size: 45px;
+    }
+    h2 {
+      font-size: 45px;
+    }
+    .cv-enterDiv {
+      display: grid;
+      grid-template-rows: 100px 300px 200px;
+    }
+    .cv-registrationFormDiv {
+      display: grid;
+      grid-template-rows: 100px 300px 200px;
+    }
+  }
+  
